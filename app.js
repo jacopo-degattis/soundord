@@ -8,6 +8,7 @@ const TOKEN = 'NzgwODUwNzU0NjQxNzIzNDEy.X71F7w.vHvQo2wu73-dowQco3iEONy7MPg'
 const CLIENT_ID = 'bOhiQWwDrH6Yk5TC999Wa3yhnUtKhgOk'
 
 let dj = null; // Current player variable
+let currVoiceChannel = null;
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
@@ -37,7 +38,7 @@ client.on('message', async (msg) => {
                                 { name: 'Song Duration', value: duration, inline: true },
                             )
             msg.reply(embed);
-            const currVoiceChannel = msg.member.voice.channel;
+            currVoiceChannel = msg.member.voice.channel;
             const connection = await currVoiceChannel.join()
             const stream = await scdl.download(receivedMessage.split(' ')[1], CLIENT_ID)
             dj = connection.play(stream);
