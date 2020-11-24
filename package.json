@@ -1,0 +1,16 @@
+{
+  "name": "soundord",
+  "version": "1.0.0",
+  "description": "Stream soundcloud tracks in Discord Channel",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Jacopo De Gattis",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.0",
+    "soundcloud-downloader": "^0.2.0"
+  }
+}
