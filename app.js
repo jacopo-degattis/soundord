@@ -50,7 +50,11 @@ client.on('message', async (msg) => {
     } else if (receivedMessage.startsWith('!resume') && receivedMessage.split(' ').length == 1) {
         dj.resume();
         msg.reply("Resuming track ! ");
-    } else {
+    } else if (receivedMessage.startsWith('!quit') && receivedMessage.split(' ').length == 1) {
+        currVoiceChannel.leave();
+        msg.reply("Bye ! ");
+    }
+    else {
         console.log("errore");
     }
 })
