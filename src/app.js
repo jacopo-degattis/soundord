@@ -4,8 +4,8 @@ const scdl = require('soundcloud-downloader')
 const fs = require('fs');
 const url = 'https://soundcloud.com/taliya-jenkins/double-cheese-burger-hold-the'
 
-const TOKEN = 'NzgwODUwNzU0NjQxNzIzNDEy.X71F7w.vHvQo2wu73-dowQco3iEONy7MPg'
-const CLIENT_ID = 'bOhiQWwDrH6Yk5TC999Wa3yhnUtKhgOk'
+const TOKEN = '<YOUT-TOKEN-HERE>'
+const CLIENT_ID = '<YOUR-CLIENT-ID>'
 
 let dj = null; // Current player variable
 let currVoiceChannel = null;
